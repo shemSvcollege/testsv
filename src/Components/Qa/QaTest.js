@@ -30,6 +30,7 @@ export default function QaTest() {
             return(
             <div>
                 <div className="card" style={{textAlign:"center"}}>
+                <img style={{width:'230px'}} src={Questions[index].image} class="card-img-top rounded mx-auto d-block"/>
                     <div className="card-header" style={{fontWeight:'Bold',backgroundColor:'#b3b3b3'}}>
                         {Questions[index].title}
                     </div>

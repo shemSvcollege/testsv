@@ -1,53 +1,23 @@
 export const Questions = [
     {
-        title:'מזה לינוקס',
+        title:'What is Google Chrome?',
         question:[
-            'מערכת הפעלה',
-            'סוג של קובץ',
-            'חברת מחשבים',
-            'זכרון חצוני'
+            'Operation System - Android',
+            'kind of file',
+            'Browser',
+            'Google Cloud Server'
+        ], 
+        answer: 2
+    },
+    {
+        title:'מזה באג?',
+        question:[
+            'כאשר אנו מצפים לפעולה ובפועל קורה משהו אחר',
+            'הודעת שגיאה',
+            'אתחול של המכשיר למצבו המקורי',
+            'יכולת נוספת של המכשיר לביצוע מטלות חכמות'
         ], 
         answer: 0
-    },
-    {
-        title:'מזה פיצר',
-        question:[
-            'תקלה במכשיר אלקטרוני',
-            'יכולת מסוימת במוצר',
-            'תנועה מעגלית במרחב',
-            'סוג של תוכנת מחשב'
-        ], 
-        answer: 1
-    },
-    {
-        title:' (RAM) מהו זכרון פנימי במחשב',
-        question:[
-            'אזור המאפשר עבודה מהירה מול המעבד',
-            'מקום לאחסון תמונות וסרטים',
-            'תוכנת של ווינדוס לקריאה של דיסקים',
-            'סוג של תוכנת מחשב'
-        ], 
-        answer:0
-    },
-    {
-        title:' QA מזה',
-        question:[
-            'מילה אחרת להייטק',
-            'מתכנת צד לקוח',
-            'כלים חשובים במחשב',
-            'הבטחת איכות'
-        ], 
-        answer: 3
-    },
-    {
-        title:'How many digits are there in the binary language? ',
-        question:[
-            'one',
-            'ten',
-            'two',
-            'four'
-        ], 
-        answer:2
     },
     {
         title:'What is the name of the company that created Office Software',
@@ -60,6 +30,26 @@ export const Questions = [
         answer:2
     },
     {
+        title:' QA מזה',
+        question:[
+            'מילה אחרת להייטק',
+            'מתכנת צד לקוח',
+            'כלים חשובים במחשב',
+            'הבטחת איכות'
+        ], 
+        answer: 3
+    },
+    {
+        title:'מהי הבדיקה הראשונית שהיית מבצע על אפליקציית וואטסאפ ',
+        question:[
+            'שליחת סרטון',
+            'הקמת קבוצה חדשה',
+            'שינוי פרטי משתמש',
+            'שליחת הודעה מינימלית'
+        ], 
+        answer:3
+    },
+    {
         title:'How to change file name?',
         question:[
             'Use Winrar',
@@ -70,14 +60,24 @@ export const Questions = [
         answer:1
     },
     {
-        title:'What is Python?',
+        title:'What is the differences between  Application to Website',
         question:[
-            'Software language',
-            'Part of Office',
-            'Kind of Operation System',
-            'Graphics Card'
+            'Created in different programming languages',
+            'Website can be open only in browser',
+            'Both need to be tested by QA team',
+            'All the answers are correct'
         ], 
-        answer:0
+        answer:3
+    },
+    {
+        title:' 2*X + 44 = 10 * (2+X) ',
+        question:[
+            'X = 3',
+            'X = 2',
+            'X = 6',
+            'X = ERROR'
+        ], 
+        answer: 0
     },
     {
         title:'4 / 0.4',
@@ -90,14 +90,14 @@ export const Questions = [
         answer: 3
     },
     {
-        title:' 2X + 44 = 10 * (2+X) ',
+        title:'If you multiply this number by any other number, the answer will always be the same. What number is this?',
         question:[
-            'X = 3',
-            'X = 2',
-            'X = 6',
-            'X = ERROR'
+            'Zero',
+            'One',
+            'None',
+            'Two'
         ], 
-        answer: 0
+        answer:0
     },
     {
         title:'',

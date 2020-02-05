@@ -30,7 +30,7 @@ export const Questions = [
         answer:1
     },
     {
-        title:'How many traingles can you find?',
+        title:'כמה משולשים ניתן למצוא בתמונה',
         question:[
             '18',
             '10',
@@ -41,17 +41,17 @@ export const Questions = [
         image:'https://www.womansworld.com/wp-content/uploads/2018/04/triangle-riddle-promo.jpg?w=715'
     },
     {
-        title:'A grandfather, two fathers and two sons went to the movie theater together and everyone bought one movie ticket each. How many tickets did they buy in total? ',
+        title:'באוטובוס יש 50 נוסעים. בתחנה ראשונה ירדו 22 נוסעים, בתחנה השניה עלו 10 נוסעים. כמה אנשים יש באוטובוס',
         question:[
-            '4',
-            '2',
-            '5',
-            '3'
+            '50',
+            '38',
+            '28',
+            '39'
         ], 
         answer:3
     },
     {
-        title:'A cell phone and phone case cost $110 in total. The cell phone costs $100 more than the phone case. How much was the cell phone?',
+        title:'טלפון וכייס לטלפון עולים יחד 110$. נתון שהטלפון עולה 100$ יותר מהכייס לטלפון. כמה עולה הטלפון',
         question:[
             '10$',
             '110$',
@@ -71,15 +71,14 @@ export const Questions = [
         answer:0
     },
     {
-        title:'Which direction the bus is going?',
+        title:'מהו שרת?',
         question:[
-            'Right',
-            'Left',
-            'Cant know',
-            'Answers A and B are true'
+            'מחשב ראשי לביצוע משימות חשובות',
+            'תוכנה אשר מספקת שירותים למחשבים אחרים',
+            'מכשיר שנמצא בתוך המחשב לחישובים מהירים',
+            'חיבור של 3 מחשבים יחד'
         ], 
-        answer:1,
-        image:'https://mindtricksgallery.com/wp-content/uploads/2016/10/bus.jpg'
+        answer: 1
     },
     {
         title:'',
