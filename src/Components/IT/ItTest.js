@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 export default function ItTest() {
 
     const [index , setIndex] = useState(0);
-    const [score , setScore] = useState(0);
+    const [score , setScore] = useState({score:0,option:[]});
     const [option,setOption] = useState(0);
-    const [english , setEnglish] = useState('');
+    const [showRes,setShowRes] = useState('none');
+
 
     useEffect(()=>{
         if(index==10){
@@ -18,9 +19,18 @@ export default function ItTest() {
         
     })
 
+
+    const password=(val)=>{
+
+        if(val.target.value === '1234')
+            setShowRes('block');
+    }
+
     const checkAnswer = (element) =>{
-        if(element.target.value == Questions[index].answer){
-            setScore(score+10);
+        score.option.push(element.target.value)
+        if(element.target.value === Questions[index].answer){
+            score.score+=10;
+            setScore(score);
         }
         setIndex(index+1);
     }
@@ -51,9 +61,14 @@ export default function ItTest() {
                     ציון מבחן התאמה
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">{score}</h5>
-                  <p className="card-text">יצאת מתאים לקורס בדיקות תוכנה</p>
-                  <Link to='/EnglishTest' className="btn btn-primary">עבור לשאלון האחרון</Link>
+                <h5 className="card-title" style={{fontSize:'25px',color:'black'}} >
+                    סיימת את המבחן, יש לפנות ליועץ הלימודים
+                </h5>
+                {/* <h5 className="card-title" style={{fontSize:'40px',color:'green'}} >&#10004;</h5> */}
+                  {/* <p className="card-text">{result()}</p> */}
+                  {/* <Link to='/EnglishTest' className="btn btn-primary">עבור לשאלון האחרון</Link> */}
+                  <input  type="password" onChange={password}/>
+                <p style={{display:showRes}}><Link to={{pathname:`/Result`, query:{Questions:Questions,score:score}}}>תוצאות</Link></p>
                 </div>
                 <div className="card-footer text-muted">
                   בהצלחה
@@ -62,7 +77,21 @@ export default function ItTest() {
             )
         }
     }
-
+    // const result = ()=>{
+    //     if(score <= 20){
+    //        // setScore(50);
+    //         return 'אנחנו לא ממליצים לך להתחיל קורס ניהול רשתות, אבל נמצאת מתאים לבדיקות תוכנה'
+    //     }
+    //     else if(score <= 69){
+    //         //setScore(60);
+    //         return 'הינך מתאימ/ה לקורס ניהול רשתות'
+    //     }
+    //     else if(score>=70 && score <=87.4)
+    //         return `${score} הינך מתאימ/ה לקורס ניהול רשתות`
+    //     else{
+    //         return ` ${score} מצוין! הינך מתאימ/ה ביותר לקורס ניהול רשתות`
+    //     }
+    // }
     return (
         <div>
         {show()}

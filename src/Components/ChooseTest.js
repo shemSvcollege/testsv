@@ -22,7 +22,7 @@ export default function ChooseTest(props) {
                     <div className="card">
                     <div className="card-body">
                     <Link to='/FullstackTest' className='choose'>
-                       <h5 className="card-title">fullStack</h5>
+                       <h5 className="card-title">FullStack</h5>
                        <p className="card-text">האם אתה מתאימ/ה להיות מפתח/ת תוכנה</p>
                      </Link>                   
                     </div>
@@ -46,7 +46,27 @@ export default function ChooseTest(props) {
                      <p className="card-text">האם מתאימ/ה לך להיות מנהל/ת רשת ואבטחת מידע</p>
                   </Link>
                   </div>
+                </div>
+         </div>
+         <div classNames="col-4">
+                  <div className="card">
+                  <div className="card-body">
+                  <Link to='/CyberTest' className='choose'>
+                     <h5 className="card-title">Cyber</h5>
+                     <p className="card-text">האם מתאימ/ה לך להיות אנליסט/ית הגנת סייבר</p>
+                  </Link>
                   </div>
+                </div>
+         </div>
+         <div classNames="col-4">
+                  <div className="card">
+                  <div className="card-body">
+                  <Link to='/' className='choose'>
+                     <h5 className="card-title">DEVOPS</h5>
+                     <p style={{color:'red'}} className="card-text">המבחן לא פעיל כרגע</p>
+                  </Link>
+                  </div>
+                </div>
          </div>
          </div>
     </div>

@@ -24,7 +24,7 @@ export const Questions = [
         title:'Who is the character in the picture',
         question:[
             'Luigi',
-            'Zelda',
+            'Link',
             'Shadow',
             'Charmander'
         ], 
@@ -52,12 +52,12 @@ export const Questions = [
         answer:2
     },
     {
-        title:'A box contains a total of 56 balls of red and blue color in the ratio of 3: What is the least number of red balls that should be removed from the box, such that the ratio of red and blue balls is less than 2 to 7?',
+        title:'JPG , GIF , PNG ',
         question:[
-            '12',
-            '11',
-            '10',
-            '9'
+            'סוגים של קבצי תמונה',
+            'סוגים של קבצי אודיו',
+            'חברות המשחקים הפופולריות ביותר',
+            'חברות כרטיסי המסך הפופולריות ביותר'
         ], 
         answer:0
     },

@@ -1,11 +1,11 @@
 export const Questions = [
     {
-        title:'What is Google Chrome?',
+        title:'Google Chrome?',
         question:[
-            'Operation System - Android',
-            'kind of file',
-            'Browser',
-            'Google Cloud Server'
+            'סוג של מערכת הפעלה',
+            'סוג של קובץ',
+            'דפדפן',
+            'שרת ענן של גוגל'
         ], 
         answer: 2
     },
@@ -20,7 +20,7 @@ export const Questions = [
         answer: 0
     },
     {
-        title:'What is the name of the company that created Office Software',
+        title:'מהי החברה שיצרה את תוכנת אופיס',
         question:[
             'Google',
             'Facebook',
@@ -50,22 +50,22 @@ export const Questions = [
         answer:3
     },
     {
-        title:'How to change file name?',
+        title:'כיצד ניתן לשנות שם של קובץ',
         question:[
-            'Use Winrar',
-            'Right click the file name, then drag the cursor to "Rename',
-            'Delete the file and create a new one',
-            'All the answers are correct'
+            ' WINRAR באמצעות ',
+            '"כפתור ימין בעכבר, לחיצה על אופציה "שנה שם',
+            'למחוק את הקובץ וליצור אחד נוסף',
+            'כל התשובות נכונות'
         ], 
         answer:1
     },
     {
-        title:'What is the differences between  Application to Website',
+        title:'מה ההבדל בין אפליקציה לאתר',
         question:[
-            'Created in different programming languages',
-            'Website can be open only in browser',
-            'Both need to be tested by QA team',
-            'All the answers are correct'
+            'שניהם נכתבים בשפות תכנות שונות',
+            'אתר יכול להפתח רק על דפדפן',
+            'שניהם צריכים להבדק על ידי איש בדיקות',
+            'כל התשובות נכונות'
         ], 
         answer:3
     },
@@ -80,22 +80,22 @@ export const Questions = [
         answer: 0
     },
     {
-        title:'4 / 0.4',
+        title:'PYTHON JAVA C# מה הקשר בין המושגים - ',
         question:[
-            '16',
-            '1.6',
-            '0.1',
-            '10'
+            'תוכנות מחשב',
+            'מושגים מתמטיים',
+            'דפדפנים',
+            'שפות תכנות'
         ], 
         answer: 3
     },
     {
-        title:'If you multiply this number by any other number, the answer will always be the same. What number is this?',
+        title:'השלם את המספר הבא בסדרה: 1 , 4 , 13 , 40',
         question:[
-            'Zero',
-            'One',
-            'None',
-            'Two'
+            '121',
+            '53',
+            'סדרה לא חוקית',
+            '120'
         ], 
         answer:0
     },

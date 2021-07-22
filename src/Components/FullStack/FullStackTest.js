@@ -4,8 +4,9 @@ import {Link} from 'react-router-dom'
 export default function FullstackTest() {
 
     const [index , setIndex] = useState(0);
-    const [score , setScore] = useState(0);
+    const [score , setScore] = useState({score:0,option:[]});
     const [option,setOption] = useState(0);
+    const [showRes,setShowRes] = useState('none');
 
 
 
@@ -22,12 +23,20 @@ export default function FullstackTest() {
     })
 
     const checkAnswer = (element) =>{
-        if(element.target.value == Questions[index].answer){
-            setScore(score+12.5);
+        score.option.push(element.target.value)
+        if(element.target.value === Questions[index].answer){
+            score.score+=12.5;
+            setScore(score);
         }
         setIndex(index+1);
     }
 
+    const password=(val)=>{
+
+        if(val.target.value === '1234')
+            setShowRes('block');
+    }
+    
     const show = () =>{
         if(option == 0){
             return(
@@ -54,10 +63,15 @@ export default function FullstackTest() {
                     ציון מבחן התאמה
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">{score}</h5>
-                  <p className="card-text">{result()}</p>
-                  <Link to='/EnglishTest' className="btn btn-primary">עבור לשאלון האחרון</Link>
-
+                {/* <h5 className="card-title" style={{fontSize:'40px',color:'green'}} >&#10004;</h5> */}
+                  {/* <p className="card-text">{result()}</p> */}
+                  {/* <Link to='/EnglishTest' className="btn btn-primary">עבור לשאלון האחרון</Link> */}
+                  <h5 className="card-title" style={{fontSize:'25px',color:'black'}} >
+                    סיימת את המבחן, יש לפנות ליועץ הלימודים
+                </h5>
+                {/* <p className="card-text">{result()}<p>{score} ציון סופי</p></p> */}
+                <input  type="password" onChange={password}/>
+                <p style={{display:showRes}}><Link to={{pathname:`/Result`, query:{Questions:Questions,score:score}}}>תוצאות</Link></p>
                 </div>
                 <div className="card-footer text-muted">
                   בהצלחה
@@ -67,15 +81,22 @@ export default function FullstackTest() {
         }
     }
 
-    const result = ()=>{
-        if(score <= 50)
-            return 'אינך מתאימ/ה לפיתוח תוכנה'
-        else if(score>=51 && score <=87.4)
-            return 'הינך מתאימ/ה לקורס פיתוח תוכנה'
-        else{
-            return 'מצוין! הינך מתאימ/ה ביותר לקורס פיתוח תוכנה'
-        }
-    }
+    // const result = ()=>{
+
+    //     if(score <= 30){
+    //        // setScore(50);
+    //         return 'אנחנו לא ממליצים לך להתחיל קורס פיתוח, אבל נמצאת מתאים לבדיקות'
+    //     }
+    //     else if(score <= 69){
+    //       //  setScore(60);
+    //         return 'הינך מתאימ/ה לקורס פיתוח תוכנה'
+    //     }
+    //     else if(score <=87.4)
+    //         return ` ${score} הינך מתאימ/ה לקורס פיתוח תוכנה`
+    //     else{
+    //         return ` ${score} מצוין! הינך מתאימ/ה ביותר לקורס פיתוח תוכנה`
+    //     }
+    // }
 
 
     return (

@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
-import {Questions} from '../../Questions/QaQuestions'
+import {Questions} from '../../Questions/CyberQuestions'
 import {Link} from 'react-router-dom'
-export default function QaTest() {
+export default function CyberTest() {
 
     const [index , setIndex] = useState(0);
     const [score , setScore] = useState({score:0,option:[]});
@@ -10,11 +10,13 @@ export default function QaTest() {
 
 
 
+
+
     useEffect(()=>{
-        if(index===10){
+        if(index==8){
             setOption(1);
         }
-        else if(index === 11){
+        else if(index == 9){
             setOption(2)
         }
         
@@ -23,7 +25,7 @@ export default function QaTest() {
     const checkAnswer = (element) =>{
         score.option.push(element.target.value)
         if(element.target.value === Questions[index].answer){
-            score.score+=10;
+            score.score+=12.5;
             setScore(score);
         }
         setIndex(index+1);
@@ -34,13 +36,13 @@ export default function QaTest() {
         if(val.target.value === '1234')
             setShowRes('block');
     }
-
+    
     const show = () =>{
-        if(option === 0){
+        if(option == 0){
             return(
             <div>
                 <div className="card" style={{textAlign:"center"}}>
-                <img style={{width:'230px'}} src={Questions[index].image} class="card-img-top rounded mx-auto d-block"/>
+                     <img style={{width:'100px'}} src={Questions[index].image} class="card-img-top rounded mx-auto d-block"/>
                     <div className="card-header" style={{fontWeight:'Bold',backgroundColor:'#b3b3b3'}}>
                         {Questions[index].title}
                     </div>
@@ -61,11 +63,14 @@ export default function QaTest() {
                     ציון מבחן התאמה
                 </div>
                 <div className="card-body">
-                <h5 className="card-title" style={{fontSize:'25px',color:'black'}} >
+                {/* <h5 className="card-title" style={{fontSize:'40px',color:'green'}} >&#10004;</h5> */}
+                  {/* <p className="card-text">{result()}</p> */}
+                  {/* <Link to='/EnglishTest' className="btn btn-primary">עבור לשאלון האחרון</Link> */}
+                  <h5 className="card-title" style={{fontSize:'25px',color:'black'}} >
                     סיימת את המבחן, יש לפנות ליועץ הלימודים
                 </h5>
                 {/* <p className="card-text">{result()}<p>{score} ציון סופי</p></p> */}
-                <input type="password" onChange={password}/>
+                <input  type="password" onChange={password}/>
                 <p style={{display:showRes}}><Link to={{pathname:`/Result`, query:{Questions:Questions,score:score}}}>תוצאות</Link></p>
                 </div>
                 <div className="card-footer text-muted">
@@ -77,20 +82,23 @@ export default function QaTest() {
     }
 
     // const result = ()=>{
-    //     let res = '';
-    //     if(score <= 61){
-    //         res+= ' \nאינך מתאימ/ה יש לפנות ליועץ לימודים'
-    //         return res
+
+    //     if(score <= 30){
+    //        // setScore(50);
+    //         return 'אנחנו לא ממליצים לך להתחיל קורס פיתוח, אבל נמצאת מתאים לבדיקות'
     //     }
-    //     else if(score>=70 && score <=79.5){
-    //         res+= ' \nnהינך מתאימ/ה לקורס בדיקות תוכנה'
-    //         return res;
+    //     else if(score <= 69){
+    //       //  setScore(60);
+    //         return 'הינך מתאימ/ה לקורס פיתוח תוכנה'
     //     }
+    //     else if(score <=87.4)
+    //         return ` ${score} הינך מתאימ/ה לקורס פיתוח תוכנה`
     //     else{
-    //         res+= ' \nמצוין! הינך מתאימ/ה ביותר לקורס בדיקות תוכנה`'
-    //         return res;
+    //         return ` ${score} מצוין! הינך מתאימ/ה ביותר לקורס פיתוח תוכנה`
     //     }
     // }
+
+
     return (
         <div>
         {show()}

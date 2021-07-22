@@ -1,11 +1,11 @@
 export const Questions = [
     {
-        title:' 2X + 44 = 10 * (2+X) ',
+        title:' 4Y - 3X = 1 || X - 1 = 0 ',
         question:[
-            'X = 6',
-            'X = 2',
-            'X = 3',
-            'X = ERROR'
+            'לא ניתן לפתור',
+            'X = 2  ; Y = 0',
+            'X = 1 ; Y = 1',
+            'X = 1 ; Y = 0'
         ], 
         answer: 2
     },
@@ -41,32 +41,32 @@ export const Questions = [
         image:'https://www.womansworld.com/wp-content/uploads/2018/04/triangle-riddle-promo.jpg?w=715'
     },
     {
-        title:'באוטובוס יש 50 נוסעים. בתחנה ראשונה ירדו 22 נוסעים, בתחנה השניה עלו 10 נוסעים. כמה אנשים יש באוטובוס',
+        title:'השלם את המספר הבא בסדרה: 1 , 4 , 13 , 40',
         question:[
-            '50',
-            '38',
-            '28',
-            '39'
+            '121',
+            '53',
+            'סדרה לא חוקית',
+            '120'
         ], 
-        answer:3
+        answer:0
     },
     {
-        title:'טלפון וכיסוי לטלפון עולים יחד 110$. נתון שהטלפון עולה 100$ יותר מהכיסוי לטלפון. כמה עולה הטלפון',
+        title:'In one sentence,what is Linux?',
         question:[
-            '10$',
-            '110$',
-            '105$',
-            '100$'
+            'Application',
+            'Web Server',
+            'Operation System',
+            'IT Protocol'
         ], 
         answer:2
     },
     {
-        title:'If you multiply this number by any other number, the answer will always be the same. What number is this?',
+        title:'What is SOC?',
         question:[
-            'Zero',
-            'One',
-            'None',
-            'Two'
+            'Security Operating Center',
+            'System On Cyber',
+            'System Operation Cyber',
+            'Six On C'
         ], 
         answer:0
     },
